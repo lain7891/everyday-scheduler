@@ -18,28 +18,6 @@ function getHeader() {
 };
 
 
-//   var currentDay = $("#currentDay").on("click", function() {
-// console.log("clicked");
-//   });
-//   var hour = $(".hour").on("click", function () {
-//     console.log("clicked");
-//   });
-//   var row = $(".row").on("click", function () {
-//     console.log("clicked");
-//   });
-
-//   var textarea = $("textarea").on("click", function () {
-//     console.log("clicked");
-//   });
-
-
-// Creating time-blocks using a for loop
-
-// timeSlots.forEach(function(thisTime){
-
-
-
-
 for (var i = 0; i < timeSlots.length; i++){
 
     var rowTimeEl = $("<div>").addClass("row time-block");
@@ -75,15 +53,31 @@ for (var i = 0; i < timeSlots.length; i++){
     console.log(saveBtn);
 // });
         saveBtn.on("click", function(){
-            var savedInfo = ($(this).data("id"));
-            console.log("clicked");
-            console.log("id", savedInfo);
+            var value = ($(this).siblings("input").val());
+            console.log(saveBtn);
+            var time = ($(this).siblings(".hour").attr("id"));
+            console.log("id", value);
+           console.log($(this).siblings("input").val());
+           console.log($(this).siblings(".hour").attr("id"));
+            localStorage.setItem(time, value);
         })
+
+        $("#H900AM").siblings("input").val(localStorage.getItem("H900AM"));
+        $("#H1000AM").siblings("input").val(localStorage.getItem("H1000AM"));
+        $("#H1100AM").siblings("input").val(localStorage.getItem("H1100AM"));
+        $("#H1200pM").siblings("input").val(localStorage.getItem("H1200pM"));
+        $("#H100pM").siblings("input").val(localStorage.getItem("H100pM"));
+        $("#H200pM").siblings("input").val(localStorage.getItem("H200pM"));
+        $("#H300pM").siblings("input").val(localStorage.getItem("H300pM"));
+        $("#H400pM").siblings("input").val(localStorage.getItem("H400pM"));
+        $("#H500pM").siblings("input").val(localStorage.getItem("H500pM"));
     };
+   
    
    
         // Function call for header
 getHeader();
+
       });
      
         
@@ -103,61 +97,4 @@ getHeader();
     
 
 
-
-// var timeSlots = ["9:00 am", "10:00 am", "11:00 am", "12:00 pm", "1:00 pm", "2:00 pm", "3:00 pm", "4:00 pm", "5:00 pm"];
-// for (i = 0; i < timeSlots.length; i++) {
-//     var hour = $(".hour");
-//     hour.text(timeSlots[i]);
-//     $(".hour").append(timeSlots);
-//   hour.text(timeSlots[i]);
-
-// }
-
-// function renderPlanner(){
-//     var currentTime = moment().format('H');
-//     var currentClass = "";
-//     var isDisabled = "";
-//     for(i=0; i<9; i++){
-//         var time = twelveHr(9 + i)
-//         if (currentTime > (9 + i)){
-//             currentClass = "past";
-//             isDisabled = "disabled";
-//         } else if (currentTime == (9 + i)) {
-//             currentClass = "present";
-//             isDisabled = "";
-//         } else {
-//             currentClass = "future";
-//             isDisabled = "";
-//         }
-//         if(myStorage.getItem(time) == null){
-//             myStorage.setItem(time, " ");
-//         };
-//     };
-// };
-
-
-// function saveReminders() {
-//     localStorage.setItem("timeSlots", JSON.stringify(timeSlots));
-// }
-
-// saveReminders();
-
-//   timeSlots.forEach(function(thisHour) {
-//     // creates timeblocks row
-//     var hourRow = $("<form>").attr({
-//         "class": "row"
-//     });
-//     $(".container").append(hourRow)});
-
-
-//   function dailyTimeBlock(){
-  
-//   }
-  // JS VARIABLES
-
-  // FUNCTION DEFINITIONS
-
-  // FUNCTION CALLS
-
-  // EVENT LISTENER
 
