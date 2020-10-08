@@ -53,12 +53,14 @@ for (var i = 0; i < timeSlots.length; i++){
     console.log(saveBtn);
 // });
         saveBtn.on("click", function(){
-            var value = ($(this).siblings("input").val());
+            var value = ($(this).siblings("rowHourEl").children("textArea").val());
+            console.log(value);
             console.log(saveBtn);
-            var time = ($(this).siblings(".hour").attr("id"));
-            console.log("id", value);
-           console.log($(this).siblings("input").val());
-           console.log($(this).siblings(".hour").attr("id"));
+            console.log($(this).siblings("rowHourEl").children("textArea").val());
+            var time = ($(this).siblings(".hour").text());
+            // console.log($(this).siblings(".hour"));
+        //    console.log($(this).siblings("input").val());
+           console.log($(this).siblings(".hour").text());
             localStorage.setItem(time, value);
         })
 
