@@ -55,10 +55,10 @@ for (var i = 0; i < timeSlots.length; i++){
     console.log(saveBtn);
 // Console log
         saveBtn.on("click", function(){
-            var value = ($(this).siblings("rowHourEl").children("textArea").val());
+            var value = ($(this).siblings("col-sm-1 saveBtn").children(".textArea").val());
             console.log(value);
             console.log(saveBtn);
-            console.log($(this).siblings("rowHourEl").children("textArea").val());
+            console.log($(this).siblings("col-sm-1 saveBtn").children(".textArea").val());
             var time = ($(this).siblings(".hour").text());
             // console.log($(this).siblings(".hour"));
         //    console.log($(this).siblings("input").val());
