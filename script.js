@@ -17,6 +17,7 @@ function getHeader() {
     $("#currentDay").text(currentHeader);
 };
 
+// creates the timeblocks
 
 for (var i = 0; i < timeSlots.length; i++){
 
@@ -28,7 +29,7 @@ for (var i = 0; i < timeSlots.length; i++){
     timeBlockContainer.append(rowTimeEl);
 
 
-
+// Add the time and colors according to the time of the day
     var textAreaEl = $("<textarea>").attr("id", timesInMilitary[i]).css({"width": "100%", "height": "100%"});
     console.log(textAreaEl)
     textInput.append(textAreaEl);
@@ -48,10 +49,11 @@ for (var i = 0; i < timeSlots.length; i++){
             "class", "future"
         );
     }
+    // button to save the reminders
     var saveBtn = $("<button>").attr("class", "col-sm-1 saveBtn").html('<i class="fab fa-diaspora"></i>');
     rowTimeEl.append(saveBtn);
     console.log(saveBtn);
-// });
+// Console log
         saveBtn.on("click", function(){
             var value = ($(this).siblings("rowHourEl").children("textArea").val());
             console.log(value);
