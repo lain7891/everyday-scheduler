@@ -5,7 +5,7 @@ This weeks assignment had us create a daily schedule where we could add reminder
 #Installation
 
 *Created a git repository
-*reated and HTMl and JavaScript file using the CSS given
+*Created and HTMl and JavaScript file using the CSS given
 *What I used to create my page:
 
 *Document Object Model (DOM)
@@ -17,6 +17,10 @@ This weeks assignment had us create a daily schedule where we could add reminder
 *Set Attributes
 *Moments.js for the time
 
+<img src="assets/morning.png">
+<img src="assets/afternoon.png">
+
+https://lain7891.github.io/everyday-scheduler/
 
 The biggest hurdle for me was getting the local storage to work properly and save the reminders when added. I definitely utilized the help of my TA’s, tutors and classmates to put this together, even if it is not quite done.
 
