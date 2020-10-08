@@ -30,7 +30,7 @@ for (var i = 0; i < timeSlots.length; i++){
 
 
 // Add the time and colors according to the time of the day
-    var textAreaEl = $("<textarea>").attr("id", timesInMilitary[i]).css({"width": "100%", "height": "100%"});
+    var textAreaEl = $("<textarea>").attr("id", timesInMilitary[i]).css({"width": "100%", "height": "100%", "color": "black"});
     console.log(textAreaEl)
     textInput.append(textAreaEl);
     console.log($(textAreaEl).attr("id"));
